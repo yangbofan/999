@@ -45,7 +45,6 @@
             margin-top: 60px;
         }
         .button-list{
-            margin-left: 100px;
             z-index: 10;
             height: 50px;
         }
@@ -129,24 +128,49 @@
             align-items: center;
             justify-content: center;
         }
+        .colorText{
+            color: red;
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        .mar{
+            margin-left: 140px;
+            z-index: 10;
+        }
+        .inputText{
+            height: 100%;
+            width: 100%;
+            border: 0;
+            outline: none;
+        }
+        .buttonInput{
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
-    <div class="title">内部号激活系统</div>
-    <div class="sub-title">满会员+全屏捡取+回收9</div>
+    <div class="title">内部激活系统</div>
+    <div class="sub-title">满攻速+刀刀切割+刀刀暴击+爆率99%</div>
     <div class="button-line">
-        <div class="button">打字报名</div>
-        <div class="button-list button" id="open">
-            <div class="ttttt">
-                <span id="botton-list">冰雪无限刀</span>
-                <div id="div1"></div>
+        <div>
+            <div class="colorText">用户id:</div>
+            <div class="button buttonInput"><input class="inputText" id="textInput" type="text"></div>
+        </div>
+        <div class="mar">
+            <div class="colorText">功能:</div>
+            <div class="button-list button" id="open">
+                <div class="ttttt">
+                    <span id="botton-list">满攻速</span>
+                    <div id="div1"></div>
+                </div>
+                <ul class="list" id="list">
+                    <li>满攻速</li>
+                    <li>刀刀切割</li>
+                    <li>刀刀暴击</li>
+                    <li>爆率99%</li>
+                </ul>
             </div>
-            <ul class="list" id="list">
-                <li>全屏捡取</li>
-                <li>自动回收</li>
-                <li>刀刀切割</li>
-                <li>专属地图</li>
-            </ul>
         </div>
     </div>
     <div class="button-line">
@@ -167,6 +191,7 @@
         const list = document.querySelector('#list')
         const lists = document.querySelector('.list')
         const bottonList = document.querySelector('#botton-list')
+        const textInput = document.querySelector('#textInput')
         submitMessage.onclick = function(){
             modal.style.display = 'flex'
         }
